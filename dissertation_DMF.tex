@@ -1,0 +1,137 @@
+%% uctest.tex 11/3/94
+%% Copyright (C) 1988-2004 Daniel Gildea, BBF, Ethan Munson.
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License, either version 1.3
+% of this license or (at your option) any later version.
+% The latest version of this license is in
+%   http://www.latex-project.org/lppl.txt
+% and version 1.3 or later is part of all distributions of LaTeX
+% version 2003/12/01 or later.
+%
+% This work has the LPPL maintenance status "maintained".
+% 
+% The Current Maintainer of this work is Daniel Gildea.
+%
+% 2007/08/01
+% LaTeX Package "ucr" is modified from LaTeX package "ucthesis."
+% This modification is therefore under to the conditions of 
+% the LaTeX Project Public License.
+% Its formality is suitable for the dissertation of Universty of
+% California, Riverside.
+% This test document is for the convenience of all students of
+% Universty of California, Riverside.
+% Contact Charles Yang at chcyang@yahoo.com if you like.
+% Charles Yang has nothing to do with the original author's sarcasm.
+%
+% \documentclass[11pt]{ucthesis}
+% \documentclass[11pt]{ucr}
+\documentclass[oneside,final, letterpaper]{ucr}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	LOADING PACKAGES 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{hyperref}
+\usepackage{epstopdf}
+\usepackage{amsmath}
+\usepackage{pdfpages}
+\usepackage{indentfirst}
+\usepackage{xurl}
+\usepackage{float}
+\usepackage{multirow}
+\usepackage{booktabs}
+%\usepackage{caption}
+\usepackage{setspace}
+\usepackage{tocloft}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	CUSTOM COMMANDS, ETC. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\hypersetup{breaklinks=true}
+%\newcommand{\sym}[1]{\rlap{$#1$}} % for symbols in Table
+\newcommand{\sym}[1]{{#1}} % for symbols in Table
+\widowpenalty10000
+\clubpenalty10000
+
+% Set the space before the List of Figures title
+\setlength{\cftbeforeloftitleskip}{2em} 
+
+\begin{document}
+
+% Declarations for Front Matter
+\title{Causal Evidence on Traffic Stop Policing Bias, Prison Phone Rate Reforms, and Heterogeneous Gas Price Elasticity}
+\author{David Michael Ford}
+\degreemonth{December}
+\degreeyear{2025}
+\degree{Doctor of Philosophy}
+\chair{Dr. Michael Bates}
+\othermembers{Dr. Ozkan Eren\\
+Dr. Ugo Antonio Troiano}
+\numberofmembers{3}
+\field{Economics}
+\campus{Riverside}
+
+\maketitle
+\copyrightpage{}
+\approvalpage{}
+
+\degreesemester{Fall}
+
+\begin{frontmatter}
+
+\begin{acknowledgements}
+%Acknowledgment section here, to be added later
+I am deeply grateful to my advisor, whose encouragement, time and guidance allowed me to succeed. I am also thankful to the economics faculty and staff at the University of California, Riverside for their guidance and inspiration throughout my studies, and for the Presley Center whose fellowship support has proven invaluable toward developing chapters 2 and 3. 
+\end{acknowledgements}
+
+\begin{dedication}
+\null\vfil
+{\large
+\begin{center}
+%Dedication section here, to be added later 
+To my fiancé, whose patience and unconditional support pushed me to persevere when I could not. This work exists because of you and your unwavering confidence. 
+\end{center}}
+\vfil\null
+\end{dedication}
+
+\input{abstract}
+
+%	Table of Contents 
+\newpage
+\tableofcontents
+
+%	List of Figures
+\newpage
+\listoffigures
+
+%	List of Tables
+\newpage
+\listoftables
+
+\end{frontmatter}
+
+% \part{First Part}
+
+
+
+%\input{introduction} 
+\input{chapter1}
+\input{chapter2}
+\input{chapter3}
+%\input{conclusion}
+
+
+
+\nocite{*}
+% \singlespacing
+% \bibliographystyle{alpha}
+\bibliographystyle{plain}
+\bibliography{bibfile}
+
+\input{appendix}
+
+
+\end{document}
